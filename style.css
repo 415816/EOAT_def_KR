@@ -10,17 +10,13 @@ body{
 
 .header, .footer {
     text-align: center;
-    background-color: #ffffff;
-    margin: 0;
+    /* background-color: #ffffff; */
+    margin: 10px 0 0 0;
 }
 
 input[placeholder="Фамилия Имя Отчество"]{
     width: 450px;
     margin: 15px;
-}
-
-div{
-    border: 1px solid black;
 }
 
 
@@ -33,9 +29,11 @@ body{
 .que1{
     display: flex;
     margin: 15px 0 15px 0;
+    padding: 10px 0 0 10px; 
     background-color: #ffffff;
-
 }
+
+
 .que1Inp, .que2Inp {
     margin: 25px 0 0 25px;
 }
@@ -43,9 +41,29 @@ body{
 .que2 {
     background-color: #ffffff;
     margin: 15px 0 15px 0;
+    padding: 10px 0 0 10px;
 
 }
 
 .clea{
     clear: both;
+}
+
+.result, .badAnsw{
+    border-radius: 5px;
+    min-height: 25px;
+    min-width: 170px;
+    margin: 5px;
+    font-size: 28px;
+    background-color: #5781e1;
+    color: #fff;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.result:hover, .badAnsw:hover{cursor: pointer;
+    background-color: #1f318e !important;
+    color: #ffffff !important;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
