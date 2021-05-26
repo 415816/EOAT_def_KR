@@ -21,38 +21,38 @@ const resultPass = document.querySelector('.resultPass');
 const badAnswPass = document.querySelector('.badAnswPass');
 
 result.onclick = () => {
-    if(resultPass.value == 12) {
+    if (resultPass.value == 12) {
         calcBal();
         resultPass.value = '';
-        }
     }
+}
 badAnsw.onclick = () => {
-    if(badAnswPass.value == 12) {
+    if (badAnswPass.value == 12) {
         falsAnsw();
         badAnswPass.value = '';
-        }
     }
+}
 
-document.querySelector('html').oncontextmenu = () => {return false};
+document.querySelector('html').oncontextmenu = () => { return false };
 
 
-function calcBal(){
+function calcBal() {
     score = 0;
-    if(qu1[2].checked) {score += 1;} else {que1.setAttribute('value', "false");}
+    if (qu1[2].checked) { score += 1; } else { que1.setAttribute('value', "false"); }
     console.log(score);
-    if(qu2[1].checked) {score += 1;} else {que2.setAttribute('value', "false");}
+    if (qu2[1].checked) { score += 1; } else { que2.setAttribute('value', "false"); }
     console.log(score);
-    if(qu3[2].checked) {score += 1;} else {que3.setAttribute('value', "false");}
+    if (qu3[2].checked) { score += 1; } else { que3.setAttribute('value', "false"); }
     console.log(score);
-    if(qu4[1].checked) {score += 1;} else {que4.setAttribute('value', "false");}
+    if (qu4[1].checked) { score += 1; } else { que4.setAttribute('value', "false"); }
     console.log(score);
-    if(qu5[0].checked) {score += 1;} else {que5.setAttribute('value', "false");}
+    if (qu5[0].checked) { score += 1; } else { que5.setAttribute('value', "false"); }
     console.log(score);
-    if(qu6[0].checked && qu6[1].checked && qu6[2].checked && qu6[4].checked && qu6[6].checked) {score += 1;} else {que6.setAttribute('value', "false");}
+    if (qu6[0].checked && qu6[1].checked && qu6[2].checked && qu6[4].checked && qu6[6].checked) { score += 1; } else { que6.setAttribute('value', "false"); }
     console.log(score);
-    if(qu7[1].checked) {score += 1;} else {que7.setAttribute('value', "false");}
+    if (qu7[1].checked) { score += 1; } else { que7.setAttribute('value', "false"); }
     console.log(score);
-    if(qu8[0].checked) {score += 1;} else {que8.setAttribute('value', "false");}
+    if (qu8[0].checked) { score += 1; } else { que8.setAttribute('value', "false"); }
     console.log(score);
     que1.style.boxShadow = "none";
     que2.style.boxShadow = "none";
@@ -64,14 +64,14 @@ function calcBal(){
     que8.style.boxShadow = "none";
 }
 
-function falsAnsw(){
-    if(que1.getAttribute('value') == 'false') {que1.style.boxShadow = "0 0 20px red";}
-    if(que2.getAttribute('value') == 'false') {que2.style.boxShadow = "0 0 20px red";}
-    if(que3.getAttribute('value') == 'false') {que3.style.boxShadow = "0 0 20px red";}
-    if(que4.getAttribute('value') == 'false') {que4.style.boxShadow = "0 0 20px red";}
-    if(que5.getAttribute('value') == 'false') {que5.style.boxShadow = "0 0 20px red";}
-    if(que6.getAttribute('value') == 'false') {que6.style.boxShadow = "0 0 20px red";}
-    if(que7.getAttribute('value') == 'false') {que7.style.boxShadow = "0 0 20px red";}
-    if(que8.getAttribute('value') == 'false') {que8.style.boxShadow = "0 0 20px red";}
+function falsAnsw() {
+    if (que1.getAttribute('value') == 'false') { que1.style.boxShadow = "0 0 20px red"; }
+    if (que2.getAttribute('value') == 'false') { que2.style.boxShadow = "0 0 20px red"; }
+    if (que3.getAttribute('value') == 'false') { que3.style.boxShadow = "0 0 20px red"; }
+    if (que4.getAttribute('value') == 'false') { que4.style.boxShadow = "0 0 20px red"; }
+    if (que5.getAttribute('value') == 'false') { que5.style.boxShadow = "0 0 20px red"; }
+    if (que6.getAttribute('value') == 'false') { que6.style.boxShadow = "0 0 20px red"; }
+    if (que7.getAttribute('value') == 'false') { que7.style.boxShadow = "0 0 20px red"; }
+    if (que8.getAttribute('value') == 'false') { que8.style.boxShadow = "0 0 20px red"; }
 
 }
