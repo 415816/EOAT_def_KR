@@ -17,12 +17,23 @@ const que6 = document.querySelector('.qw6');
 const que7 = document.querySelector('.qw7');
 const que8 = document.querySelector('.qw8');
 const badAnsw = document.querySelector('.badAnsw');
+const resultPass = document.querySelector('.resultPass');
+const badAnswPass = document.querySelector('.badAnswPass');
 
-result.onclick = calcBal;
-badAnsw.onclick = falsAnsw;
+result.onclick = () => {
+    if(resultPass.value == 12) {
+        calcBal();
+        resultPass.value = '';
+        }
+    }
+badAnsw.onclick = () => {
+    if(badAnswPass.value == 12) {
+        falsAnsw();
+        badAnswPass.value = '';
+        }
+    }
 
-document.contextmenu = () => {return false;}
-//document.querySelector('body').oncontextmenu = () => {return false};
+document.querySelector('html').oncontextmenu = () => {return false};
 
 
 function calcBal(){
