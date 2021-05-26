@@ -43,6 +43,14 @@ function calcBal(){
     console.log(score);
     if(qu8[0].checked) {score += 1;} else {que8.setAttribute('value', "false");}
     console.log(score);
+    que1.style.boxShadow = "none";
+    que2.style.boxShadow = "none";
+    que3.style.boxShadow = "none";
+    que4.style.boxShadow = "none";
+    que5.style.boxShadow = "none";
+    que6.style.boxShadow = "none";
+    que7.style.boxShadow = "none";
+    que8.style.boxShadow = "none";
 }
 
 function falsAnsw(){
