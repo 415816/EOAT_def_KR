@@ -19,6 +19,11 @@ const que8 = document.querySelector('.qw8');
 const badAnsw = document.querySelector('.badAnsw');
 const resultPass = document.querySelector('.resultPass');
 const badAnswPass = document.querySelector('.badAnswPass');
+const closeStartMessage = document.querySelector('.closeStartMessage');
+const container = document.querySelector('.container');
+const time = 15 * 60;
+const r = document.getElementById('r');
+const tmp = time;
 
 result.onclick = () => {
     if (resultPass.value == 12) {
@@ -35,6 +40,18 @@ badAnsw.onclick = () => {
 
 document.querySelector('html').oncontextmenu = () => { return false };
 
+closeStartMessage.onclick = () => {
+    container.style.display = "none";
+    
+    setInterval(function(){
+        let c = tmp--
+        let m = (c / 60) >> 0
+        let s = (c - m * 60) + '';
+        r.textContent = 'Осталось ' + m + ':' + (s.length > 1 ? '' : '0') + s;
+        if(m == 0 && s == 1) check();
+        tmp != 0 || (tmp = time);
+    }, 1000); 
+} 
 
 function calcBal() {
     score = 0;
