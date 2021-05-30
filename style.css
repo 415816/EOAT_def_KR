@@ -49,7 +49,7 @@ body{
     clear: both;
 }
 
-.result, .badAnsw{
+.result, .badAnsw, .closeStartMessage{
     border-radius: 5px;
     min-height: 25px;
     min-width: 170px;
@@ -62,7 +62,7 @@ body{
     font-weight: bold;
 }
 
-.result:hover, .badAnsw:hover{cursor: pointer;
+.result:hover, .badAnsw:hover, .closeStartMessage:hover{cursor: pointer;
     background-color: #1f318e !important;
     color: #ffffff !important;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
@@ -88,4 +88,13 @@ body{
     background-color: #efefef;
     text-align: center;
     font-size: 30px;
+}
+
+#r{
+    float: right;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
 }

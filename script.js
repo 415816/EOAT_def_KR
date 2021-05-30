@@ -23,7 +23,7 @@ const closeStartMessage = document.querySelector('.closeStartMessage');
 const container = document.querySelector('.container');
 const time = 15 * 60;
 const r = document.getElementById('r');
-const tmp = time;
+let tmp = time;
 
 result.onclick = () => {
     if (resultPass.value == 12) {
