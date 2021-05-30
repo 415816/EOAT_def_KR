@@ -7,22 +7,26 @@
     <title>ЭОСУАТ - защита контрольной работы</title>
 </head>
 <body>
+    <div class="container">
+        <div class="startMessage">
+            <p>При защите контрольной работы допускается использование собственной работой и лекций, на испытание дается 15 минут, таймер запустится после нажания кнопки "Приступить"</p>
+            <button class="closeStartMessage">Приступить</button>
+        </div>
+    </div>
+
     <div class="header">
         <h2>Введите в поле ниже свои ФИО</h2>
-        <input placeholder="Фамилия Имя Отчество" type="text">
+        <input placeholder="Фамилия Имя Отчество" id="FIO" type="text">
     </div>
     <div class="boder">
-        <div class="container">
-            <div class="startMessage">
-                <p>При защите контрольной работы допускается использование собственной работой и лекций, на испытание дается 15 минут, таймер запустится после нажания кнопки "Приступить"</p>
-                <button class="closeStartMessage">Приступить</button>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="startMessage">
-                <p>При защите контрольной работы допускается использование собственной работой и лекций, на испытание дается 15 минут, таймер запустится после нажания кнопки "Приступить"</p>
-                <button class="closeStartMessage">Приступить</button>
+
+        <div class="endContainer">
+            <div class="endMessage">
+                <p><span id="toFio"></span>, Вы набрали <span id="scor"></span> балл(ов), контрольная работа - <span id="appraisal"></span> </p>
+                <button class="closeEndMessage">Я все понял!
+                    <input type="password" id="passCloseMessage">
+                </button>
             </div>
         </div>
 
@@ -142,10 +146,9 @@
     </div>
     <div class="footer">
         <button class="result">Проверить результаты
-            <input class="resultPass" type="text">
         </button>
         <button class="badAnsw">Указать на неверные ответы
-            <input class="badAnswPass" type="text">
+            <input class="badAnswPass" type="password">
         </button>
     </div>
     <script src="./script.js"></script>

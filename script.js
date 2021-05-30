@@ -17,24 +17,36 @@ const que6 = document.querySelector('.qw6');
 const que7 = document.querySelector('.qw7');
 const que8 = document.querySelector('.qw8');
 const badAnsw = document.querySelector('.badAnsw');
-const resultPass = document.querySelector('.resultPass');
 const badAnswPass = document.querySelector('.badAnswPass');
 const closeStartMessage = document.querySelector('.closeStartMessage');
 const container = document.querySelector('.container');
 const time = 15 * 60;
 const r = document.getElementById('r');
 let tmp = time;
+const FIO = document.getElementById('FIO');
+const toFio = document.getElementById('toFio');
+const scor = document.getElementById('scor');
+const appraisal = document.getElementById('appraisal');
+const endContainer = document.querySelector('.endContainer');
+let scAppra = ''; 
+const passCloseMessage = document.querySelector('#passCloseMessage');
+const closeEndMessage = document.querySelector('.closeEndMessage');
+
 
 result.onclick = () => {
-    if (resultPass.value == 12) {
         calcBal();
-        resultPass.value = '';
-    }
 }
 badAnsw.onclick = () => {
     if (badAnswPass.value == 12) {
         falsAnsw();
         badAnswPass.value = '';
+    }
+}
+
+closeEndMessage.onclick = () => {
+    if (passCloseMessage.value == 12) {
+        endContainer.style.display = "none";
+        passCloseMessage.value == '';
     }
 }
 
@@ -48,7 +60,7 @@ closeStartMessage.onclick = () => {
         let m = (c / 60) >> 0
         let s = (c - m * 60) + '';
         r.textContent = 'Осталось ' + m + ':' + (s.length > 1 ? '' : '0') + s;
-        if(m == 0 && s == 1) check();
+        if(m == 0 && s == 1) calcBal();
         tmp != 0 || (tmp = time);
     }, 1000); 
 } 
@@ -79,6 +91,12 @@ function calcBal() {
     que6.style.boxShadow = "none";
     que7.style.boxShadow = "none";
     que8.style.boxShadow = "none";
+    endContainer.style.display = "block";
+    if(score >= 4) {scAppra = 'зачтена. Теперь можете приступить к сдаче зачета.'} else {scAppra = 'не зачтена. Пересдача по вторникам, время и аудиторию Вы можете уточнить на стенде у 307 аудитории либо в группе ВК: https://vk.com/suti_roat'}
+    toFio.innerText = FIO.value;
+    scor.innerText = score;
+    appraisal.innerText = scAppra;
+
 }
 
 function falsAnsw() {
@@ -92,3 +110,4 @@ function falsAnsw() {
     if (que8.getAttribute('value') == 'false') { que8.style.boxShadow = "0 0 20px red"; }
 
 }
+
