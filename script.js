@@ -55,7 +55,8 @@ document.querySelector('html').oncontextmenu = () => { return false };
 closeStartMessage.onclick = () => {
     if(FIO.value != 0){
     container.style.display = "none";
-    }
+    
+
     setInterval(function(){
         let c = tmp--
         let m = (c / 60) >> 0
@@ -64,6 +65,7 @@ closeStartMessage.onclick = () => {
         if(m == 0 && s == 1) calcBal();
         tmp != 0 || (tmp = time);
     }, 1000); 
+}
 } 
 
 function calcBal() {
