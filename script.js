@@ -53,8 +53,9 @@ closeEndMessage.onclick = () => {
 document.querySelector('html').oncontextmenu = () => { return false };
 
 closeStartMessage.onclick = () => {
+    if(FIO.value != 0){
     container.style.display = "none";
-    
+    }
     setInterval(function(){
         let c = tmp--
         let m = (c / 60) >> 0
