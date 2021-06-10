@@ -70,21 +70,21 @@ closeStartMessage.onclick = () => {
 
 function calcBal() {
     score = 0;
-    if (qu1[2].checked) { score += 1; } else { que1.setAttribute('value', "false"); }
+    if ((qu1[2].checked == true) && (qu1[0].checked == false) && (qu1[1].checked == false) && (qu1[3].checked == false)) { score += 1; } else { que1.setAttribute('value', "false"); }
     console.log(score);
-    if (qu2[1].checked) { score += 1; } else { que2.setAttribute('value', "false"); }
+    if ((qu2[1].checked == true) && (qu2[0].checked == false) && (qu2[2].checked == false) && (qu2[3].checked == false)) { score += 1; } else { que2.setAttribute('value', "false"); }
     console.log(score);
-    if (qu3[2].checked) { score += 1; } else { que3.setAttribute('value', "false"); }
+    if ((qu3[2].checked == true) && (qu3[0].checked == false) && (qu3[1].checked == false) && (qu3[3].checked == false)) { score += 1; } else { que3.setAttribute('value', "false"); }
     console.log(score);
-    if (qu4[1].checked) { score += 1; } else { que4.setAttribute('value', "false"); }
+    if ((qu4[1].checked == true) && (qu4[0].checked == false) && (qu4[2].checked == false) && (qu4[3].checked == false)) { score += 1; } else { que4.setAttribute('value', "false"); }
     console.log(score);
-    if (qu5[0].checked) { score += 1; } else { que5.setAttribute('value', "false"); }
+    if ((qu5[0].checked == true) && (qu5[1].checked == false) && (qu5[2].checked == false) && (qu5[3].checked == false)) { score += 1; } else { que5.setAttribute('value', "false"); }
     console.log(score);
-    if (qu6[0].checked && qu6[1].checked && qu6[2].checked && qu6[4].checked && qu6[6].checked) { score += 1; } else { que6.setAttribute('value', "false"); }
+    if ((qu6[0].checked == true) && (qu6[1].checked == true) && (qu6[2].checked == true) && (qu6[3].checked == false) && (qu6[4].checked == true)  && (qu6[6].checked == true) && (qu6[6].checked == true)) { score += 1; } else { que6.setAttribute('value', "false"); }
     console.log(score);
-    if (qu7[1].checked) { score += 1; } else { que7.setAttribute('value', "false"); }
+    if ((qu7[1].checked == true) && (qu7[0].checked == false) && (qu7[2].checked == false) && (qu7[3].checked == false)) { score += 1; } else { que7.setAttribute('value', "false"); }
     console.log(score);
-    if (qu8[0].checked) { score += 1; } else { que8.setAttribute('value', "false"); }
+    if ((qu8[0].checked == true) && (qu8[1].checked == false) && (qu8[2].checked == false) && (qu8[3].checked == false)) { score += 1; } else { que8.setAttribute('value', "false"); }
     console.log(score);
     que1.style.boxShadow = "none";
     que2.style.boxShadow = "none";
@@ -99,7 +99,7 @@ function calcBal() {
     toFio.innerText = FIO.value;
     scor.innerText = score;
     appraisal.innerText = scAppra;
-
+    passCloseMessage.value = '';
 }
 
 function falsAnsw() {
