@@ -37,14 +37,14 @@ result.onclick = () => {
         calcBal();
 }
 badAnsw.onclick = () => {
-    if (badAnswPass.value == 12) {
+    if (badAnswPass.value == 21) {
         falsAnsw();
         badAnswPass.value = '';
     }
 }
 
 closeEndMessage.onclick = () => {
-    if (passCloseMessage.value == 12) {
+    if (passCloseMessage.value == 21) {
         endContainer.style.display = "none";
         passCloseMessage.value == '';
     }
@@ -80,7 +80,7 @@ function calcBal() {
     console.log(score);
     if ((qu5[0].checked == true) && (qu5[1].checked == false) && (qu5[2].checked == false) && (qu5[3].checked == false)) { score += 1; } else { que5.setAttribute('value', "false"); }
     console.log(score);
-    if ((qu6[0].checked == true) && (qu6[1].checked == true) && (qu6[2].checked == true) && (qu6[3].checked == false) && (qu6[4].checked == true)  && (qu6[6].checked == true) && (qu6[6].checked == true)) { score += 1; } else { que6.setAttribute('value', "false"); }
+    if ((qu6[0].checked == true) && (qu6[1].checked == true) && (qu6[2].checked == true) && (qu6[3].checked == false) && (qu6[4].checked == true)  && (qu6[5].checked == false) && (qu6[6].checked == true) && (qu6[7].checked == false) && (qu6[8].checked == false)) { score += 1; } else { que6.setAttribute('value', "false"); }
     console.log(score);
     if ((qu7[1].checked == true) && (qu7[0].checked == false) && (qu7[2].checked == false) && (qu7[3].checked == false)) { score += 1; } else { que7.setAttribute('value', "false"); }
     console.log(score);
